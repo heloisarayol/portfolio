@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@subdomains/*": ["./src/subdomains/*"],
+        "@components/*": ["./src/components/*"],
+        "@assets/*": ["./src/assets/*"],
+        "@hooks/*":["./src/hooks/*"],
+        "@core/*":["./src/core/*"]
+
+      }
+    },
+    "include": ["src"]
+}
