@@ -11,9 +11,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --primary: #F1DAF3;
+  --secondary: #B86FBE;
   --surface: #000000;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
+*, *::before, *::after { box-sizing: border-box; }
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,9 +30,8 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  width: 100vw;
- height: 100vh;
+ min-height: 100svh;
+ margin: 0;
 }
 
 h1 {
