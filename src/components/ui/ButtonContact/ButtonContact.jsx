@@ -7,8 +7,8 @@ const StyledButtonLink = styled.a`
   display: inline-flex; 
   align-items: center;   
   justify-content: center; 
-  width: clamp(4rem, 10vh, 10rem);          
-  height: clamp(4rem, 10vh, 10rem);        
+  width: clamp(4rem, 8vh, 8rem);          
+  height: clamp(4rem, 8vh, 8rem);        
   background-color: var(--secondary); 
   border-radius: 12px;     
   text-decoration: none;    

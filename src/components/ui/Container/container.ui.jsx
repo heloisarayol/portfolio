@@ -7,7 +7,8 @@ export const Container = styled.div`
   flex-wrap: ${({ wrap }) => wrap};
   position: ${(({position}) => position)};
   margin: ${(({margin}) => margin)};
-  height: ${(({height}) => height || "100%")};
+  height: ${(({height}) => height || "auto")};
+  min-height: ${({ minHeight }) => minHeight};
   background-image:${({ img }) => img != null || img != undefined ? `url(${img})` : ""};
   background-size: ${({ bgSize }) => bgSize ?? 'contain'};
   background-position: ${({bgPosition}) => bgPosition};

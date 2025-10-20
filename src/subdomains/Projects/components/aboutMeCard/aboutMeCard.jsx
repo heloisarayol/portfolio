@@ -11,7 +11,7 @@ import { useOrientation } from "@hooks/useOrientation"
 export const AboutMeCard = () => {
     const orientation = useOrientation()
     return (
-        <Container  display="flex" wrap="wrap" gap="2rem" width={orientation == "landscape" ? "50%" : "90%"} justify="center" align="center">
+        <Container  display="flex" wrap="wrap" gap="2rem" width={orientation == "landscape" ? "40%" : "90%"} justify="center" align="center">
             <Container width="75%" height="8%" margin="0 auto 0 0">
                 <h2>Olá, eu sou Heloisa!</h2>
             </Container>
