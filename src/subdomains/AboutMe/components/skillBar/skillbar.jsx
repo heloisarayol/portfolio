@@ -81,7 +81,7 @@ export const SkillBar = ({ icon, label, level }) => {
       </SkillBadge>
 
       <RightSide>
-        <h4>{label}</h4>
+        <h4 style={{overflowWrap: 'break-word', wordBreak: 'normal'}}>{label}</h4>
     
       </RightSide>
     </SkillContainer>

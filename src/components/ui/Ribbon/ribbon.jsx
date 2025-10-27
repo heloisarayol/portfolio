@@ -10,7 +10,7 @@ z-index: 2;
   --speed: 20s;         
   --tilt: -2deg;         
   position: relative;
-  height: clamp(36px, 6vh, 150px);
+  height: clamp(36px, 7vh, 150px);
   width: 100%;
   overflow: hidden;
   transform: rotate(var(--tilt));
