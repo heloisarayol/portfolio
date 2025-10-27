@@ -177,4 +177,5 @@ export const Desc = styled.p`
   margin: 0;
   line-height: 1.45;
   font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 600;
 `;

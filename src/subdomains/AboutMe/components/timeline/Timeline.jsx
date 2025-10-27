@@ -1,13 +1,17 @@
 import { Badge, Card, DateText, Desc, Item, Items, Title, TrackContainer, Wrapper } from "./timeline.styles";
 
 export function Timeline({ items = [] }) {
-    return (
-      <Wrapper>
-        <TrackContainer>
-          <Items>
-            {items.map((it, idx) => (
-              <Item key={idx}>
-                {/* Badge: fica sobre o trilho (desktop e mobile) */}
+  return (
+    <Wrapper>
+      <TrackContainer>
+        <Items>
+          {items.map((it, idx) => {
+            const key = it.id ?? `${it.title ?? "item"}-${idx}`;
+            const hasDesc = typeof it.description === "string" && it.description.trim().length > 0;
+            const hasHighlights = Array.isArray(it.highlights) && it.highlights.length > 0;
+
+            return (
+              <Item key={key}>
                 <Badge aria-hidden>
                   <div className="wrap">
                     <svg viewBox="0 0 24 24" fill="none">
@@ -21,16 +25,34 @@ export function Timeline({ items = [] }) {
                     </svg>
                   </div>
                 </Badge>
-  
+
                 <DateText>{it.date}</DateText>
+
                 <Card>
                   <Title>{it.title}</Title>
-                  <Desc>{it.description}</Desc>
+          
+                  {hasDesc && <Desc>{it.description}</Desc>}
+          
+                  {hasHighlights && (
+                    <ul
+                      style={{
+                        margin: hasDesc ? "10px 0 0" : "0",
+                        padding: "0 0 0 1.1rem",
+                      }}
+                    >
+                      {it.highlights.map((h, i) => (
+                        <Desc as="li" key={i} style={{ margin: "6px 0" }}>
+                          {h}
+                        </Desc>
+                      ))}
+                    </ul>
+                  )}
                 </Card>
               </Item>
-            ))}
-          </Items>
-        </TrackContainer>
-      </Wrapper>
-    );
-  }
+            );
+          })}
+        </Items>
+      </TrackContainer>
+    </Wrapper>
+  );
+}
